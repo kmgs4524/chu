@@ -68,10 +68,10 @@
                             
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="contact.html" >聯絡</a>
-                        
-                    </li>
+                    <li>
+                        <a href="contact.html">聯絡</a>
+                    </li> 
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -263,11 +263,28 @@
             <div class="col-lg-12">
                 <h2 class="page-header">用Google Map 查詢</h2>
             </div>
-            <div class="col-md-6" style="">
-                <p style="font-size:0.5cm">你可以在這裡直接搜尋展演空間的位置 <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i></p>
-                例如:河岸留言西門紅樓展演館
-                
-            </div>
+
+            <div class="col-md-6">
+                <p style="font-size:0.5cm">你可以在這裡直接搜尋展演空間的位置</p>
+                <form>
+                    
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">活動日期</label>
+                        <input type="text" class="form-control" id="activityDate" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">活動區域</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                        <option>北區</option>
+                        <option>中區</option>
+                        <option>南區</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">搜尋</button>
+                </form>
+
+
             <div class="col-md-6">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7609643893356!2d121.50390301489425!3d25.042184883968535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a909a4c00313%3A0x376df8cab2713e61!2z5rKz5bK455WZ6KiA6KW_6ZaA57SF5qiT5bGV5ryU6aSo!5e0!3m2!1szh-TW!2stw!4v1503644926611" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
