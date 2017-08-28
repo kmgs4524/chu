@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -28,6 +28,63 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height:400px;
+        weight:auto;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .controls {
+        margin-top: 10px;
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      #pac-input {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 300px;
+      }
+
+      #pac-input:focus {
+        border-color: #4d90fe;
+      }
+
+      .pac-container {
+        font-family: Roboto;
+      }
+
+      #type-selector {
+        color: #fff;
+        background-color: #4d90fe;
+        padding: 5px 11px 0px 11px;
+      }
+
+      #type-selector label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+      #target {
+        width: 345px;
+      }
+    </style>
 
 </head>
 
@@ -37,8 +94,8 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <div class="navbar-header" style="width:auto">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="width:auto">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -59,17 +116,16 @@
                     <li>
                         <a href="#search">查詢</a>
                     </li>
-                    <li>
-                        <a href="contact.html">聯絡</a>
-                    </li> 
-
+                    <li class="dropdown">
+                        <a href="contact.html" >聯絡</a>
+                        
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
-
     <!-- Header Carousel -->
     <header id="myCarousel" class="carousel slide">
         <!-- Indicators -->
@@ -118,7 +174,7 @@
     </header>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container" >
 
         <!-- 精選區塊 -->
         <div class="row" id="collection">
@@ -181,37 +237,32 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 class="colHead"><i class="fa fa-fw fa-check"></i>MIU x 鐵三角 Bla Bla Concert</h4>
+                        <h4 class="colHead"><i class="fa fa-fw fa-check"></i>慢慢說樂團 SE-NOせーの巡迴演唱會</h4>
                     </div>
                     <div class="panel-body">
-                        <img src="https://imgs.utiki.com.tw/Data/KHAM/Images/UTK2401/M03FTK61_APP.JPG" class="img-responsive  img-portfolio img-hover" alt="Image">
+                        <img src="http://addons.books.com.tw/G/3/03060001816063/03060001816063.gif" class="img-responsive" alt="Image">
+                        <p>高雄市鼓山區蓬萊路99號B10倉庫 ....<a href="#">Learn More</a></p>
+                        <a href="#" > #南區</a>
+                        <a href="#" > #In Our Time</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="colHead"><i class="fa fa-fw fa-check"></i>2017 八三夭生日趴趴趴巡迴演唱會台北場</h4>
+                    </div>
+                    <div class="panel-body">
+                        <img src="http://b.rimg.com.tw/s1/6/92/d7/21730777425623_863_m.jpg" class="img-responsive" alt="Image">
                         <p>台北市中正區八德路一段1號 ....<a href="#">Learn More</a></p>
                         <a href="#" > #北區</a>
                         <a href="#" > #永豐Legacy Taipei</a>
                     </div>
                 </div>
             </div>
-            <div class="row">
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="colHead"><i class="fa fa-fw fa-check"></i>MIU x 鐵三角 Bla Bla Concert</h4>
-                    </div>
-                    <div class="panel-body">
-                        <img src="https://imgs.utiki.com.tw/Data/KHAM/Images/UTK2401/M03FTK61_APP.JPG" class="img-responsive  img-portfolio img-hover" alt="Image">
-                        <p>台北市中正區八德路一段1號 ....<a href="#">Learn More</a></p>
-                        <a href="#" > #北區</a>
-                        <a href="#" > #永豐Legacy Taipei</a>
-                    </div>
-                </div>
-            </div>
-            </div>
-            
-           
         </div>
          <p style="font-size:0.7cm;text-align:right">...</p>
         <!-- /.row -->
@@ -221,7 +272,7 @@
             <div class="col-lg-12">
                 <h2 class="page-header">探索</h2>
             </div>
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-4 col-sm-4">
                 <a href="#">
                     
                     <img src="http://www.taipei-101.com.tw/images/fbshare.jpg" class="img-responsive  img-portfolio img-hover" alt="Image">
@@ -229,7 +280,7 @@
                 </a>
                 <p style="font-size:0.5cm;text-align:center">北區</p>
             </div>
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-4 col-sm-4">
                 <a href="#">
                     
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/%E8%87%BA%E4%B8%AD%E5%9C%8B%E5%AE%B6%E6%AD%8C%E5%8A%87%E9%99%A2.jpg/1200px-%E8%87%BA%E4%B8%AD%E5%9C%8B%E5%AE%B6%E6%AD%8C%E5%8A%87%E9%99%A2.jpg" class="img-responsive  img-portfolio img-hover" alt="Image">
@@ -237,7 +288,7 @@
                 </a>
                 <p style="font-size:0.5cm;text-align:center">中區</p>
             </div>
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-4 col-sm-4">
                 <a href="#">
                     
                     <img src="https://i.ytimg.com/vi/LoCDXAJZCEk/maxresdefault.jpg" class="img-responsive  img-portfolio img-hover" alt="Image">
@@ -254,10 +305,10 @@
             <div class="col-lg-12">
                 <h2 class="page-header">用Google Map 查詢</h2>
             </div>
-
-            <div class="col-md-6">
-                <p style="font-size:0.5cm">你可以在這裡直接搜尋展演空間的位置</p>
-                <form>
+            <div class="col-md-4" >
+                <p style="font-size:0.4cm">你可以在這裡直接搜尋展演空間的位置 <i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></p>
+                例如:河岸留言西門紅樓展演館
+            <form>
                     
                     <div class="form-group">
                         <label for="exampleInputPassword1">活動日期</label>
@@ -272,21 +323,123 @@
                         </select>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary search">搜尋</button>
+                    <button type="submit" class="btn btn-primary" >搜尋</button>
                 </form>
-
-
-            <div class="col-md-6">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7609643893356!2d121.50390301489425!3d25.042184883968535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a909a4c00313%3A0x376df8cab2713e61!2z5rKz5bK455WZ6KiA6KW_6ZaA57SF5qiT5bGV5ryU6aSo!5e0!3m2!1szh-TW!2stw!4v1503644926611" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
+            
         </div>
+        <br></br>
+        <input id="pac-input" class="controls" type="text" placeholder="輸入你想搜尋的位置">
+        <div id="map"></div>
+            <script>
+            var map;
+            function initAutocomplete() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 25.051436, lng: 121.549601},
+          zoom: 13,
+          mapTypeId: 'roadmap'
+        });
+        
+
+        // Create the search box and link it to the UI element.
+        var input = document.getElementById('pac-input');
+        var searchBox = new google.maps.places.SearchBox(input);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        // Bias the SearchBox results towards current map's viewport.
+        map.addListener('bounds_changed', function() {
+          searchBox.setBounds(map.getBounds());
+        });
+
+        var markers = [];
+        // Listen for the event fired when the user selects a prediction and retrieve
+        // more details for that place.
+        searchBox.addListener('places_changed', function() {
+          var places = searchBox.getPlaces();
+
+          if (places.length == 0) {
+            return;
+          }
+
+          // Clear out the old markers.
+          markers.forEach(function(marker) {
+            marker.setMap(null);
+          });
+          markers = [];
+
+          // For each place, get the icon, name and location.
+          var bounds = new google.maps.LatLngBounds();
+          places.forEach(function(place) {
+            if (!place.geometry) {
+              console.log("Returned place contains no geometry");
+              return;
+            }
+            var icon = {
+              url: place.icon,
+              size: new google.maps.Size(71, 71),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(17, 34),
+              scaledSize: new google.maps.Size(25, 25)
+            };
+
+            // Create a marker for each place.
+            markers.push(new google.maps.Marker({
+              map: map,
+              icon: icon,
+              title: place.name,
+              position: place.geometry.location
+            }));
+
+            if (place.geometry.viewport) {
+              // Only geocodes have viewport.
+              bounds.union(place.geometry.viewport);
+            } else {
+              bounds.extend(place.geometry.location);
+            }
+          });
+          map.fitBounds(bounds);
+        });
+        var infoWindow = new google.maps.InfoWindow({map: map});
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+      }
+      
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXL284gIVWLTX74HHzibTKF-OcaG8PoVc&libraries=places&callback=initAutocomplete"
+         async defer></script>
+  </body>
         <!-- /.row -->
 
         <!-- Footer -->
         <footer>
             <div class="row">
-                <div class="col-lg-12">
-                    <p style="text-align:center">Copyright &copy; Your Website 2017</p>
+                <div class="col-lg-12" >
+                    <p style="text-align:center">Copyright &copy; Chu 2017</p>
                 </div>
             </div>
         </footer>

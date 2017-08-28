@@ -9,9 +9,11 @@
 html,
 body {
     height: 100%;
+    
 }
 
 body {
+    width: auto;
     padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
@@ -26,7 +28,7 @@ body {
 /* Home Page Carousel */
 
 header.carousel {
-    height: 50%;
+    height: 70%;
 }
 
 header.carousel .item,
@@ -70,7 +72,7 @@ header.carousel .fill {
 /* Footer Styles */
 
 footer {
-    margin: 50px 0;
+    
 }
 
 /* Responsive Styles */
