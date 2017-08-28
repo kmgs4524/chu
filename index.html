@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0; user-scalable=0;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -33,6 +33,7 @@
        * element that contains the map. */
       #map {
         height:400px;
+        weight:auto;
       }
       html, body {
         height: 100%;
@@ -124,10 +125,10 @@
                             
                         </ul>
                     </li>
-                    <li>
-                        <a href="contact.html">聯絡</a>
-                    </li> 
-
+                    <li class="dropdown">
+                        <a href="contact.html" >聯絡</a>
+                        
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -248,23 +249,23 @@
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i>MIU x 鐵三角 Bla Bla Concert</h4>
+                        <h4><i class="fa fa-fw fa-check"></i>慢慢說樂團 SE-NOせーの巡迴演唱會</h4>
                     </div>
                     <div class="panel-body">
-                        <img src="https://imgs.utiki.com.tw/Data/KHAM/Images/UTK2401/M03FTK61_APP.JPG" class="img-responsive" alt="Image">
-                        <p>台北市中正區八德路一段1號 ....<a href="#">Learn More</a></p>
-                        <a href="#" > #北區</a>
-                        <a href="#" > #永豐Legacy Taipei</a>
+                        <img src="http://addons.books.com.tw/G/3/03060001816063/03060001816063.gif" class="img-responsive" alt="Image">
+                        <p>高雄市鼓山區蓬萊路99號B10倉庫 ....<a href="#">Learn More</a></p>
+                        <a href="#" > #南區</a>
+                        <a href="#" > #In Our Time</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i>MIU x 鐵三角 Bla Bla Concert</h4>
+                        <h4><i class="fa fa-fw fa-check"></i>2017 八三夭生日趴趴趴巡迴演唱會台北場</h4>
                     </div>
                     <div class="panel-body">
-                        <img src="https://imgs.utiki.com.tw/Data/KHAM/Images/UTK2401/M03FTK61_APP.JPG" class="img-responsive" alt="Image">
+                        <img src="http://b.rimg.com.tw/s1/6/92/d7/21730777425623_863_m.jpg" class="img-responsive" alt="Image">
                         <p>台北市中正區八德路一段1號 ....<a href="#">Learn More</a></p>
                         <a href="#" > #北區</a>
                         <a href="#" > #永豐Legacy Taipei</a>
@@ -313,15 +314,10 @@
             <div class="col-lg-12 ">
                 <h2 class="page-header">用Google Map 查詢</h2>
             </div>
-          
             <div class="col-md-4" >
                 <p style="font-size:0.4cm">你可以在這裡直接搜尋展演空間的位置 <i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></p>
                 例如:河岸留言西門紅樓展演館
-            
-
-
-
-                <form>
+            <form>
                     
                     <div class="form-group">
                         <label for="exampleInputPassword1">活動日期</label>
@@ -336,11 +332,12 @@
                         </select>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary">搜尋</button>
+                    <button type="submit" class="btn btn-primary" >搜尋</button>
                 </form>
             </div>
             
         </div>
+        <br></br>
         <input id="pac-input" class="controls" type="text" placeholder="輸入你想搜尋的位置">
         <div id="map"></div>
             <script>
@@ -351,6 +348,7 @@
           zoom: 13,
           mapTypeId: 'roadmap'
         });
+        
 
         // Create the search box and link it to the UI element.
         var input = document.getElementById('pac-input');
@@ -410,7 +408,35 @@
           });
           map.fitBounds(bounds);
         });
+        var infoWindow = new google.maps.InfoWindow({map: map});
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
       }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+      }
+      
 
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXL284gIVWLTX74HHzibTKF-OcaG8PoVc&libraries=places&callback=initAutocomplete"
@@ -422,7 +448,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12" >
-                    <p style="text-align:center">Copyright &copy; Your Website 2017</p>
+                    <p style="text-align:center">Copyright &copy; Chu 2017</p>
                 </div>
             </div>
         </footer>
