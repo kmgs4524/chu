@@ -124,10 +124,10 @@
                             
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="contact.html" >聯絡</a>
-                        
-                    </li>
+                    <li>
+                        <a href="contact.html">聯絡</a>
+                    </li> 
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -313,10 +313,31 @@
             <div class="col-lg-12 ">
                 <h2 class="page-header">用Google Map 查詢</h2>
             </div>
+          
             <div class="col-md-4" >
                 <p style="font-size:0.4cm">你可以在這裡直接搜尋展演空間的位置 <i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></p>
                 例如:河岸留言西門紅樓展演館
             
+
+
+
+                <form>
+                    
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">活動日期</label>
+                        <input type="text" class="form-control" id="activityDate" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">活動區域</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                        <option>北區</option>
+                        <option>中區</option>
+                        <option>南區</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">搜尋</button>
+                </form>
             </div>
             
         </div>
