@@ -8,15 +8,30 @@ let data = [];
 
 let format = (array) => (
     array.map((value) => {
-        let time, location, locationName, price = undefined;
+        let price = '待定';
+        let time = '待定';
+        let location = '待定';
+        let locationName = '待定';
+
         if(Array.isArray(value.showInfo)) {
-            // console.log('value.showInfo.price', value.showInfo[0].price);
-            time = value.showInfo[0].time;
-            price = value.showInfo[0].price;
-            location = value.showInfo[0].location;
-            locationName = value.showInfo[0].locationName;            
-        }
-        
+            if(!(value.showInfo[0].time === '')) {
+                time = value.showInfo[0].time;
+            }
+            if(!(value.showInfo[0].price === '')) {
+                price = value.showInfo[0].price;
+            }
+            if(!(value.showInfo[0].location === '')) {
+                location = value.showInfo[0].location;
+            }
+            if(!(value.showInfo[0].locationName === '')) {
+                locationName = value.showInfo[0].locationName;
+            }           
+        }   
+
+        // if(value.imageUrl === '') {
+
+        // }
+
         return {
             key: value.UID,
             title: value.title,
@@ -40,9 +55,9 @@ module.exports = () => {
     }).catch(function(err) {
         console.error('catch', err);
     }).then((respJson) => {
-        // console.log(respJson[1]);
+        // console.log('respJson[5].imgUrl', respJson[5].imageUrl === '');
         let formatData = format(respJson);
-        // console.log('formatData:', formatData);
+        // console.log('formatData:', formatData[0]);
         return formatData;
     })
     return data;

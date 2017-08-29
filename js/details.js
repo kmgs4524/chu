@@ -1,8 +1,26 @@
 import $ from 'jquery';
-const queryString = require('query-string');
+import queryString from 'query-string';
 
-console.log(queryString.parse(location.search));
+// console.log(queryString.parse(location.search));
 
+let initContent = () => {
+    let detailContent = queryString.parse(location.search);
+    console.log('detailContent', detailContent);
+    $('#content-title').text(detailContent.title);
+    $('#content-time').text(detailContent.startTime);
+    $('#content-location').text(`${detailContent.location} ${detailContent.locationName}`);
+    $('#content-description').text(detailContent.desc);
+
+    // if(!detailContent.price.includes('$')) {
+    //     $('#content-price').text(`NT$${detailContent.price}`);
+    // } else {
+    //     $('#content-price').text(detailContent.price);
+    // }
+    $('#content-price').text(detailContent.price);
+    
+} 
+
+initContent();
 // let initDetail = (target) => {
 //     // console.log('Top 6 data:', topData.length);
 //     // target.text('hello world');
