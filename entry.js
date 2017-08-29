@@ -28,6 +28,14 @@ let initCollection = () => {
             console.log('colHead.title after', $(this).text(topData[i].title));
         });
         
+        $('.briefIntro').each(function(i){
+            console.log('briefIntro.dsec', $(this).text(topData[i].desc));
+        });
+
+        $('.imgUrl').each(function(i){
+            console.log('imgUrl', $(this).attr("src", topData[i].img));
+        });
+
         $('.link-detail').each(function(i) {    //i: index of .link-detail
             $(this).on('click', function() {
                 let stringifiedTopData =  queryString.stringify(topData[i]);
