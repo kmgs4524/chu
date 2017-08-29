@@ -20,6 +20,7 @@
   "homepage": "https://github.com/kmgs4524/chu#readme",
   "dependencies": {
     "jquery": "^3.2.1",
+    "query-string": "^5.0.0",
     "webpack-dev-server": "^2.7.1"
   },
   "devDependencies": {
