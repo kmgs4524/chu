@@ -7,7 +7,7 @@ module.exports = {
   watch: true,
   devtool: 'source-map',  
   entry: {
-    app: ["./entry.js"]
+    app: ["./entry.js", "./js/details.js"]
   },
   output: {
     path: __dirname,

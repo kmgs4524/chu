@@ -1,5 +1,7 @@
 import $ from 'jquery';
+import queryString from 'query-string';
 import getData from './js/getData';
+import initDetail from './js/details';
 
 //UI component
 let navbar = $("ul.nav");
@@ -24,12 +26,28 @@ let initCollection = () => {
         $('.colHead').each(function (i)  {
             console.log('colHead.title before', $(this).text());
             console.log('colHead.title after', $(this).text(topData[i].title));
-        })
+        });
         
+        $('.briefIntro').each(function(i){
+            console.log('briefIntro.dsec', $(this).text(topData[i].desc));
+        });
+
+        $('.imgUrl').each(function(i){
+            console.log('imgUrl', $(this).attr("src", topData[i].img));
+        });
+
+        $('.link-detail').each(function(i) {    //i: index of .link-detail
+            $(this).on('click', function() {
+                let stringifiedTopData =  queryString.stringify(topData[i]);
+                $(this).attr('href', 'details.html?' + stringifiedTopData);
+                
+            });
+        });
 
 }
 
 initData();
+
 // console.log('Top 6 data:', topData.length);
 // const p1 = new Promise((resolve) => {
 //     await initData();
