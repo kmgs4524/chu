@@ -25,6 +25,7 @@ let initCollection = () => {
             console.log('colHead.title before', $(this).text());
             console.log('colHead.title after', $(this).text(topData[i].title));
         })
+        
 
 }
 
