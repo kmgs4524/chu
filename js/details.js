@@ -10,7 +10,12 @@ let initContent = () => {
     $('#content-time').text(detailContent.startTime);
     $('#content-location').text(`${detailContent.location} ${detailContent.locationName}`);
     $('#content-description').text(detailContent.desc);
-
+    if(detailContent.img === '') {
+        $('#content-image').attr('src', 'http://placehold.it/700x450');
+    } else {
+        $('#content-image').attr('src', detailContent.img);
+    }
+    
     // if(!detailContent.price.includes('$')) {
     //     $('#content-price').text(`NT$${detailContent.price}`);
     // } else {
