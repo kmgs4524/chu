@@ -1,0 +1,9 @@
+.pagination{
+    border: 1px solid #0B3954;
+}
+.pagination>.active>a{
+    color: #fff;
+    cursor: default;
+    background-color: #0B3954;
+    border-color: #0B3954;
+}
