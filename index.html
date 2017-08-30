@@ -5,17 +5,22 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bootstrap模板</title>
+    <title>CHU </title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Font CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Sedgwick+Ave+Display" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -39,6 +44,8 @@
         height: 100%;
         margin: 0;
         padding: 0;
+        background-color: #F7F9F9;
+        font-family: 微軟正黑體;
       }
       .controls {
         margin-top: 10px;
@@ -107,23 +114,14 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     
+                    <li class='navCol'>
+                        <a href="#collection">精選</a>
+                    </li id='navExp'>
                     <li>
-                        <a href="#">精選</a>
+                        <a href="#explore">探索</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">探索<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="portfolio-1-col.html">北區</a>
-                            </li>
-                            <li>
-                                <a href="portfolio-2-col.html">中區</a>
-                            </li>
-                            <li>
-                                <a href="portfolio-3-col.html">南區</a>
-                            </li>
-                            
-                        </ul>
+                    <li>
+                        <a href="#search">查詢</a>
                     </li>
                     <li class="dropdown">
                         <a href="contact.html" >聯絡</a>
@@ -147,29 +145,44 @@
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" >
+                
             <div class="item active">
-                <div class="fill" style="background-image:url('http://www.legacy.com.tw/uploads/image_library/1499839347.jpg');"></div>
+                    <a class="link-top-detail" href="#">
+                    
+                <div class="fill" style="background-image:url('http://cloud.culture.tw/h_upload_ccacloud/ccacloud/image/A0/B0/C-2/D-36/E-665/F-640/1501201886773.jpg');"></div>
                 <div class="carousel-caption">
                     
                 </div>
+                        
+                    
+                     </a>
+            </div>
+
+            <div class="item">
+                    <a class="link-top-detail" href="#">
+                <div class="fill" style="background-image:url('http://cloud.culture.tw/h_upload_ccacloud/ccacloud/image/A0/B0/C-2/D-36/E-170/F-531/1501202381462.png');"></div>
+                <div class="carousel-caption">
+                    
+                </div>
+
+        </a>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('http://www.legacy.com.tw/uploads/image_library/1496932281.jpg');"></div>
+                    <a class="link-top-detail" href="#">
+                <div class="fill" style="background-image:url('http://cloud.culture.tw/h_upload_ccacloud/ccacloud/image/A0/B0/C-1/D-197/E-691/F-691/1497745893489.png');"></div>
                 <div class="carousel-caption">
                     
                 </div>
+                    </a>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('https://img.tixbar.com/concert/2017/miu-chu-concert2017-1.jpg');"></div>
+                    <a class="link-top-detail" href="#">
+                <div class="fill" style="background-image:url('http://cloud.culture.tw/h_upload_ccacloud/ccacloud/image/A0/B0/C-2/D-35/E-966/F-384/1501202586140.png
+                ');"></div>
                 <div class="carousel-caption">
                     
                 </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('http://www.legacy.com.tw/uploads/image_library/1500522291.jpg');"></div>
-                <div class="carousel-caption">
-                    
-                </div>
+                    </a>
             </div>
         </div>
 
@@ -185,49 +198,44 @@
     <!-- Page Content -->
     <div class="container" >
 
-        <!-- Marketing Icons Section -->
-        <div class="row">
-            <div class="col-lg-12" >
-                <h1 class="page-header">   
+        <!-- 精選區塊 -->
+        <div class="row" id="collection">
+            <div class="col-lg-12">
+                <h2 class="page-header">   
                    精選
-                </h1>
+                </h2>
             </div>
             <div class="row">
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 style="font-size:0.4cm"><i class="fa fa-fw fa-check"></i>海象之聲 Walrussound - 漫遊者 Wanderer</h4>
+                        <h4 class="colHead" ></h4>
                     </div>
                     <div class="panel-body">
-                        <img src="http://omusic.friday.tw/img/album/1343474.jpg" class="img-responsive" alt="Image">
-                        <p>臺北市思源街一號....<a href="#" >Learn More</a></p>
-                         <a href="#" > #北區</a>
+                        <img src="http://placehold.it/700x450" class="img-responsive  img-portfolio img-hover imgUrl" alt="Image">
+                        <p class="briefIntro"></p><span><a class="link-detail" href="details.html?id=nothing" >Learn More</a></span>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 style="font-size:0.4cm"><i class="fa fa-fw fa-check"></i>Misi Ke 柯泯薰 2017 DON'T MAKE A SOUND TOUR 台北場</h4>
+                        <h4 class="colHead" ><i class="fa fa-fw fa-compass"></i></h4>
                     </div>
                     <div class="panel-body">
-                        <img src="https://i.ytimg.com/vi/ExCCcTg3T4A/maxresdefault.jpg" class="img-responsive" alt="Image">
-                        <p>臺北市中正區八德路一段1號 .... <a href="#" >Learn More</a></p>
-                        <a href="#" > #北區</a>
-                        <a href="#" > #永豐Legacy Taipei</a>
+                        <img src="http://placehold.it/700x450" class="img-responsive  img-portfolio img-hover imgUrl" alt="Image">
+                        <p class="briefIntro"></p><spam><a class="link-detail" href="#" >Learn More</a></span>
                     </div>
                 </div>
             </div> 
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i>Last Winking 樂團 ／ 學院王國</h4>
+                        <h4 class="colHead" ></h4>
                     </div>
                     <div class="panel-body">
-                        <img src="https://www.twtainan.net/Utility/DisplayImage?id=47485" class="img-responsive" alt="Image">
-                        <p>臺北市西寧南路177號 ....<a href="#">Learn More</a></p>
-                        <a href="#" > #北區</a>
-                        <a href="#" > #河岸留言</a>
+                        <img src="http://placehold.it/700x450" class="img-responsive  img-portfolio img-hover imgUrl" alt="Image">
+                        <p class="briefIntro"></p><spam><a class="link-detail" href="#" >Learn More</a></span>
                     </div>
                 </div>
             </div>
@@ -236,39 +244,33 @@
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i>MIU x 鐵三角 Bla Bla Concert</h4>
+                        <h4 class="colHead"></h4>
                     </div>
                     <div class="panel-body">
-                        <img src="https://imgs.utiki.com.tw/Data/KHAM/Images/UTK2401/M03FTK61_APP.JPG" class="img-responsive" alt="Image">
-                        <p>台北市中正區八德路一段1號 ....<a href="#">Learn More</a></p>
-                        <a href="#" > #北區</a>
-                        <a href="#" > #永豐Legacy Taipei</a>
+                        <img src="http://placehold.it/700x450" class="img-responsive  img-portfolio img-hover imgUrl" alt="Image">
+                        <p class="briefIntro"></p><spam><a  class="link-detail" href="#" >Learn More</a></span>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i>慢慢說樂團 SE-NOせーの巡迴演唱會</h4>
+                        <h4 class="colHead"></h4>
                     </div>
                     <div class="panel-body">
-                        <img src="http://addons.books.com.tw/G/3/03060001816063/03060001816063.gif" class="img-responsive" alt="Image">
-                        <p>高雄市鼓山區蓬萊路99號B10倉庫 ....<a href="#">Learn More</a></p>
-                        <a href="#" > #南區</a>
-                        <a href="#" > #In Our Time</a>
+                        <img src="http://placehold.it/700x450" class="img-responsive  img-portfolio img-hover imgUrl" alt="Image">
+                        <p class="briefIntro"></p><spam><a class="link-detail" href="#" >Learn More</a></span>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i>2017 八三夭生日趴趴趴巡迴演唱會台北場</h4>
+                        <h4 class="colHead"></h4>
                     </div>
                     <div class="panel-body">
-                        <img src="http://b.rimg.com.tw/s1/6/92/d7/21730777425623_863_m.jpg" class="img-responsive" alt="Image">
-                        <p>台北市中正區八德路一段1號 ....<a href="#">Learn More</a></p>
-                        <a href="#" > #北區</a>
-                        <a href="#" > #永豐Legacy Taipei</a>
+                        <img src="http://placehold.it/700x450" class="img-responsive  img-portfolio img-hover imgUrl" alt="Image">
+                        <p class="briefIntro"></p><spam><a class="link-detail" href="#" >Learn More</a></span>
                     </div>
                 </div>
             </div>
@@ -276,15 +278,15 @@
          <p style="font-size:0.7cm;text-align:right">...</p>
         <!-- /.row -->
 
-        <!-- Portfolio Section -->
-        <div class="row">
+        <!-- 探索區塊 -->
+        <!-- <div class="row" id="explore">
             <div class="col-lg-12">
                 <h2 class="page-header">探索</h2>
             </div>
             <div class="col-md-4 col-sm-4">
                 <a href="#">
                     
-                    <img src="http://www.taipei-101.com.tw/images/fbshare.jpg" class="img-responsive" alt="Image">
+                    <img src="http://www.taipei-101.com.tw/images/fbshare.jpg" class="img-responsive  img-portfolio img-hover" alt="Image">
                     
                 </a>
                 <p style="font-size:0.5cm;text-align:center">北區</p>
@@ -292,7 +294,7 @@
             <div class="col-md-4 col-sm-4">
                 <a href="#">
                     
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/%E8%87%BA%E4%B8%AD%E5%9C%8B%E5%AE%B6%E6%AD%8C%E5%8A%87%E9%99%A2.jpg/1200px-%E8%87%BA%E4%B8%AD%E5%9C%8B%E5%AE%B6%E6%AD%8C%E5%8A%87%E9%99%A2.jpg" class="img-responsive" alt="Image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/%E8%87%BA%E4%B8%AD%E5%9C%8B%E5%AE%B6%E6%AD%8C%E5%8A%87%E9%99%A2.jpg/1200px-%E8%87%BA%E4%B8%AD%E5%9C%8B%E5%AE%B6%E6%AD%8C%E5%8A%87%E9%99%A2.jpg" class="img-responsive  img-portfolio img-hover" alt="Image">
                     
                 </a>
                 <p style="font-size:0.5cm;text-align:center">中區</p>
@@ -300,47 +302,55 @@
             <div class="col-md-4 col-sm-4">
                 <a href="#">
                     
-                    <img src="https://i.ytimg.com/vi/LoCDXAJZCEk/maxresdefault.jpg" class="img-responsive" alt="Image">
+                    <img src="https://i.ytimg.com/vi/LoCDXAJZCEk/maxresdefault.jpg" class="img-responsive  img-portfolio img-hover" alt="Image">
                     
                 </a>
                 <p style="font-size:0.5cm;text-align:center">南區</p>
             </div>  
             
-        </div>
+        </div> -->
         <!-- /.row -->
 
-        <!-- Features Section -->
-        <div class="row">
-            <div class="col-lg-12 ">
-                <h2 class="page-header">用Google Map 查詢</h2>
-            </div>
-            <div class="col-md-4" >
-                <p style="font-size:0.4cm">你可以在這裡直接搜尋展演空間的位置 <i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i></p>
-                例如:河岸留言西門紅樓展演館
-            <form>
-                    
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">活動日期</label>
-                        <input type="text" class="form-control" id="activityDate" placeholder="">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">活動區域</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                        <option>北區</option>
-                        <option>中區</option>
-                        <option>南區</option>
-                        </select>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary" >搜尋</button>
-                </form>
-            </div>
+
+        <!-- 探索區塊 -->
+        <div class="row" id="explore">
+            <div class="col-lg-12">
+                <h2 class="page-header" >探索活動</h2>
             
+                <div class="col-md-4" >
+                    <form>
+                        <div class="form-group">
+                            <p >活動區域</p>
+                            <input type="text" class="form-control" id="input-area" placeholder="ex: 臺北市">
+                        </div>
+                        <!-- <button type="submit" class="btn btn-primary" id='btn-search'> -->
+                        <a class="btn btn-primary" id="link-result" href="" >搜尋</a>
+                        <!-- </button> -->
+                    </form>
+                </div>
+            </div>
         </div>
+        <!-- 探索區塊 -->
+
+        <!-- 查詢區塊 -->
+        <div class="row">
+                
+            <div class="col-lg-12">   
+                <h2 class="page-header" id="search">查詢地址</h2>
+            
+                <p >你可以在這裡直接搜尋展演空間的位置 
+                    <i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i>
+                </p>
+                   
+           </div>
+        </div> 
+        <!-- 查詢區塊 -->
+
         <br></br>
-        <input id="pac-input" class="controls" type="text" placeholder="輸入你想搜尋的位置">
+
+        <input id="pac-input" class="controls" type="text" placeholder="ex: 河岸留言西門紅樓展演館">
         <div id="map"></div>
-            <script>
+    <script>
             var map;
             function initAutocomplete() {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -440,7 +450,8 @@
 
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXL284gIVWLTX74HHzibTKF-OcaG8PoVc&libraries=places&callback=initAutocomplete"
-         async defer></script>
+         async defer>
+    </script>
   </body>
         <!-- /.row -->
 
@@ -461,6 +472,9 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- bundle entry.js by webpack -->
+    <script type="text/javascript" src="./bundle.js" charset="utf-8"></script>
 
     <!-- Script to Activate the Carousel -->
     <script>
