@@ -19,6 +19,9 @@
     <!-- Custom CSS -->
     <link href="css/modern-business.css" rel="stylesheet">
 
+    <!-- Font CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Sedgwick+Ave+Display" rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
@@ -41,6 +44,8 @@
         height: 100%;
         margin: 0;
         padding: 0;
+        background-color: #F7F9F9;
+        font-family: 微軟正黑體;
       }
       .controls {
         margin-top: 10px;
@@ -181,15 +186,15 @@
         <!-- 精選區塊 -->
         <div class="row" id="collection">
             <div class="col-lg-12">
-                <h1 class="page-header">   
+                <h2 class="page-header">   
                    精選
-                </h1>
+                </h2>
             </div>
             <div class="row">
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 class="colHead" style="font-size:0.4cm" ><i class="fa fa-fw fa-check"></i></h4>
+                        <h4 class="colHead" ><i class="fa fa-fw fa-check"></i></h4>
                     </div>
                     <div class="panel-body">
                         <img src="http://placehold.it/700x450" class="img-responsive  img-portfolio img-hover imgUrl" alt="Image">
@@ -200,7 +205,7 @@
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 class="colHead" style="font-size:0.4cm"><i class="fa fa-fw fa-compass"></i></h4>
+                        <h4 class="colHead" ><i class="fa fa-fw fa-compass"></i></h4>
                     </div>
                     <div class="panel-body">
                         <img src="http://placehold.it/700x450" class="img-responsive  img-portfolio img-hover imgUrl" alt="Image">
@@ -300,8 +305,8 @@
                 <div class="col-md-4" >
                     <form>
                         <div class="form-group">
-                            <label for="exampleInput">活動區域（ex:台北市）</label>
-                            <input type="text" class="form-control" id="input-area" value="123"placeholder="">
+                            <p >活動區域（ex:台北市）</p>
+                            <input type="text" class="form-control" id="input-area" placeholder="">
                         </div>
                         <!-- <button type="submit" class="btn btn-primary" id='btn-search'> -->
                         <a class="btn btn-primary" id="link-result" href="" >搜尋</a>
@@ -318,10 +323,13 @@
             <div class="col-lg-12">   
                 <h2 class="page-header" id="search">查詢地址</h2>
             
-                <p style="font-size:0.4cm">你可以在這裡直接搜尋展演空間的位置> 
+                <p >你可以在這裡直接搜尋展演空間的位置 
                     <i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i>
                 </p>
-                   例如:河岸留言西門紅樓展演館
+                <p>
+                    例如：河岸留言西門紅樓展演館
+                </p>
+                   
            </div>
         </div> 
         <!-- 查詢區塊 -->
