@@ -12,7 +12,13 @@ let format = (array) => (
         let time = '待定';
         let location = '待定';
         let locationName = '待定';
+        let desc = '尚未有簡介';
 
+        //判斷活動是否有簡介
+        if(value.descriptionFilterHtml !== '') {
+            desc = value.descriptionFilterHtml;
+        }
+        // 先判斷是否有showInfo，再判斷showInfo的各個key是否為空值
         if(Array.isArray(value.showInfo)) {
             if(!(value.showInfo[0].time === '')) {
                 time = value.showInfo[0].time;
@@ -28,10 +34,6 @@ let format = (array) => (
             }           
         }   
 
-        // if(value.imageUrl === '') {
-
-        // }
-
         return {
             key: value.UID,
             title: value.title,
@@ -41,7 +43,7 @@ let format = (array) => (
             locationName: locationName,
             price: price,
             img: value.imageUrl,
-            desc: value.descriptionFilterHtml
+            desc: desc
         }
     })
 )

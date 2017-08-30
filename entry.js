@@ -2,6 +2,7 @@ import $ from 'jquery';
 import queryString from 'query-string';
 import getData from './js/getData';
 import initDetail from './js/details';
+import initResult from './js/result';
 
 //UI component
 let navbar = $("ul.nav");
@@ -13,23 +14,28 @@ var topData = [];
 
 let initData = async() => {
     allData = await getData();
-    console.log('Returnd value from getData:', allData);
+    console.log('allData:', allData);
     for(let i = 0; i <= 5; i++) {
         topData[i] = allData[i]; //抓取allData的前五筆為首頁精選
     }
-    console.log('Top 6 data:', topData);
+    // console.log('Top 6 data:', topData);
+    initResult(allData);
     initCollection();
+    initExplore();
+    
 }
 
 let initCollection = () => {
         // console.log('Top 6 data:', topData.length);
         $('.colHead').each(function (i)  {
             // console.log('colHead.title before', $(this).text());
-            console.log('colHead.title after', $(this).text(topData[i].title));
+            // console.log('colHead.title after', $(this).text(topData[i].title));
+            $(this).text(topData[i].title);
         });
         
         $('.briefIntro').each(function(i){
-            console.log('briefIntro.dsec', $(this).text(topData[i].desc));
+            // console.log('briefIntro.dsec', $(this).text(topData[i].desc));
+            $(this).text(topData[i].desc);
         });
 
         $('.imgUrl').each(function(i){
@@ -50,7 +56,23 @@ let initCollection = () => {
 
 }
 
+let initExplore = () => {
+
+    $('#link-result').on('click', function() {
+        // 務必要在onClick事件觸發時才定inputObj，否則會發生非同步的錯誤
+        let inputObj = {
+            value: $('#input-area').val()
+        }
+        console.log('inputObj:', inputObj);
+        let stringifiedObj =  queryString.stringify(inputObj);
+        // console.log('stringifiedValue:', stringifiedValue);
+        $(this).attr('href', `./result.html?${stringifiedObj}`);
+        
+    });
+}
+
 initData();
+
 
 // console.log('Top 6 data:', topData.length);
 // const p1 = new Promise((resolve) => {

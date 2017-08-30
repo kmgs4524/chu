@@ -1,9 +1,8 @@
 import $ from 'jquery';
 import queryString from 'query-string';
 
-// console.log(queryString.parse(location.search));
 
-let initContent = () => {
+let initDetail = () => {
     let detailContent = queryString.parse(location.search);
     console.log('detailContent', detailContent);
     $('#content-title').text(detailContent.title);
@@ -15,8 +14,7 @@ let initContent = () => {
     } else {
         $('#content-image').attr('src', detailContent.img);
     }
-    
-    // if(!detailContent.price.includes('$')) {
+    // if(!(detailContent.price.includes('$')) && detailContent.price !== '待定') {
     //     $('#content-price').text(`NT$${detailContent.price}`);
     // } else {
     //     $('#content-price').text(detailContent.price);
@@ -25,21 +23,5 @@ let initContent = () => {
     
 } 
 
-initContent();
-// let initDetail = (target) => {
-//     // console.log('Top 6 data:', topData.length);
-//     // target.text('hello world');
-//     console.log('detail title:', target);
-    
-// }
-
+initDetail();
 // module.exports = initDetail;
-
-// function processForm() {
-//   var parameters = location.search.substring(1).split("&");
-//   var temp = parameters[0].split("=");
-//   l = unescape(temp[1]);
-//   console.log(l); //Dialog with the text you put on the textbox
-// }
-
-// processForm();
