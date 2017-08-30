@@ -3,3 +3,10 @@
     align-items: center;
     background-color: LightGray ;
 }
+
+.content-price{
+    font-weight: 400;
+}
+.mainContent{
+    margin-top: 30px;
+}
