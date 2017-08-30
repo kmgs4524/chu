@@ -41,9 +41,10 @@ let initResult = async(data) => {
         }
         // $(this).attr('src', items[i].img);
     });
-    // for(let i = 0; i <= 4; i++) {
-    //     $('.item-title').text(items[i].title);
-    // }
+
+    $('.pageNum').each(function(i) {
+        $(this).text()
+    });
 
     // 按下Learn More超連結，傳入topData[i](擁有某活動詳細資料的物件)到活動詳細頁面(details.html)
     $('.item-detail').each(function(i) {    //i: index of .link-detail
