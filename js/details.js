@@ -2,7 +2,7 @@ import $ from 'jquery';
 import queryString from 'query-string';
 
 
-let initDetail = () => {
+let initDetail = (queryStr) => {
     let detailContent = queryString.parse(location.search);
     console.log('detailContent', detailContent);
     $('#content-title').text(detailContent.title);
