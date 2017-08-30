@@ -11,6 +11,7 @@ let search = $(".search");
 //data
 var allData = [];   //allData為所有筆資料，topData為首頁精選的資料
 var topData = [];
+var slideData= [];
 
 let initData = async() => {
     allData = await getData();
@@ -18,6 +19,12 @@ let initData = async() => {
     for(let i = 0; i <= 5; i++) {
         topData[i] = allData[i]; //抓取allData的前五筆為首頁精選
     }
+
+    slideData[0]=allData[7];
+    slideData[1]=allData[10];
+    slideData[2]=allData[17];
+    slideData[3]=allData[40];
+
     // console.log('Top 6 data:', topData);
     initResult(allData);
     initCollection();
@@ -32,10 +39,23 @@ let initCollection = () => {
             // console.log('colHead.title after', $(this).text(topData[i].title));
             $(this).text(topData[i].title);
         });
-        
+
+
+        $('.colHead_1').each(function (i)  {
+            // console.log('colHead.title before', $(this).text());
+            // console.log('colHead.title after', $(this).text(topData[i].title));
+            $(this).text(slideData[i].title);
+        });
+
         $('.briefIntro').each(function(i){
             // console.log('briefIntro.dsec', $(this).text(topData[i].desc));
             $(this).text(topData[i].desc);
+        });
+
+        
+        $('.briefIntro_1').each(function(i){
+            // console.log('briefIntro.dsec', $(this).text(topData[i].desc));
+            $(this).text(slideData[i].desc);
         });
 
         $('.imgUrl').each(function(i){
@@ -46,11 +66,26 @@ let initCollection = () => {
             }
         });
 
+        $('.imgUrl_1').each(function(i){
+            if(topData[i].img === '') {
+                $(this).attr("src", 'http://placehold.it/700x450');
+            } else {
+                console.log('imgUrl', $(this).attr("src", slideData[i].img));
+            }
+        });
+
         // 按下Learn More超連結，傳入topData[i](擁有某活動詳細資料的物件)到活動詳細頁面(details.html)
         $('.link-detail').each(function(i) {    //i: index of .link-detail
             $(this).on('click', function() {
                 let stringifiedTopData =  queryString.stringify(topData[i]);
                 $(this).attr('href', 'details.html?' + stringifiedTopData);
+            });
+        });
+
+        $('.link-top-detail').each(function(i) {    //i: index of .link-detail
+            $(this).on('click', function() {
+                let stringifiedTopData1 =  queryString.stringify(slideData[i]);
+                $(this).attr('href', 'details.html?' + stringifiedTopData1);
             });
         });
 
