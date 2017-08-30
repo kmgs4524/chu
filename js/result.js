@@ -22,15 +22,12 @@ let filterData = async(data) => {
     return results;
 }
 
-let initResult = async(data) => {
-    let items = await filterData(data);
-    console.log('items', items);
-    let limit = 5;  //每個批次最多5頁
-
+let initItem = (items) => {
     $('.item-title').each(function(i) {
-        let index = 0;
         $(this).text(items[i].title);
+        // currIndex = currIndex + 1;
     });
+
     $('.item-desc').each(function(i) {
         $(this).text(items[i].desc);
     });
@@ -51,16 +48,28 @@ let initResult = async(data) => {
             $(this).attr('href', 'details.html?' + stringifiedItem);
         });
     });
+}
+
+let initResult = async(data) => {
+    let items = await filterData(data);
+    console.log('items', items);
+    let limit = 5;  //每個批次最多5頁
+    // console.log('page active', $('.active').children().text());
+    // let currIndex = 0;
+    // console.log('currIndex', currIndex);
+
+    initItem(items);
 
     // console.log('children', $('.page').children().text());
 
 
     $('.page').each(function() {
-        $(this).on('click', function(){
+        $(this).on('click', function(){ //點擊頁碼
             $('.page').each(function(){
                 $(this).attr('class', 'page');
             });
             $(this).attr('class', 'page active');
+            console.log('page active', $('.active').children().text());
             //若當前頁面為id=li5
             if(this.id === 'li5'){
                 console.log('id', $(this));
@@ -70,9 +79,9 @@ let initResult = async(data) => {
                     limit = limit + 1;
                 });
                 $('.page').each(function(){
-                    $(this).attr('class', 'page');
+                    $(this).attr('class', 'page');  //重置所有li為not active
                 });
-                $('#li1').attr('class', 'page active');
+                $('#li1').attr('class', 'page active'); //將點擊的li設為active
             }
         });
         
