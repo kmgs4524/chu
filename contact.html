@@ -22,6 +22,10 @@
 
     <link rel="stylesheet" href="css/hellojs-color.css">
 
+    <!-- Font CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Sedgwick+Ave+Display" rel="stylesheet">
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -37,61 +41,32 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <div class="navbar-header" style="width:auto">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="width:auto">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">HelloJS</a>
+                <a class="navbar-brand" href="index.html" style="font-size:1.2cm">Chu</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                    
+                    <li class='navCol'>
+                        <a href="index.html#collection">精選</a>
+                    </li id='navExp'>
                     <li>
-                        <a href="about.html">精選</a>
+                        <a href="index.html#explore">探索</a>
                     </li>
                     <li>
-                        <a href="shop.html">查詢</a>
-                    </li>
-                     <li>
-                        <a href="contact.html">聯絡</a>
-                    </li> 
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">探索 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="portfolio-1-col.html">北區</a>
-                            </li>
-                            <li>
-                                <a href="portfolio-2-col.html">中區</a>
-                            </li>
-                            <li>
-                                <a href="portfolio-3-col.html">南區</a>
-                            </li>
-                            <!-- <li>
-                                <a href="portfolio-4-col.html">四欄</a>
-                            </li>
-                            <li>
-                                <a href="portfolio-item.html">單一項目</a>
-                            </li>
-                        </ul>
+                        <a href="index.html#search">查詢</a>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="blog-home-1.html">Blog Home 1</a>
-                            </li>
-                            <li>
-                                <a href="blog-home-2.html">Blog Home 2</a>
-                            </li>
-                            <li>
-                                <a href="blog-post.html">Blog Post</a>
-                            </li>
-                        </ul>
-                    </li> -->
+                        <a href="contact.html" >聯絡</a>
+                        
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -126,17 +101,17 @@
             </div>
             <!-- Contact Details Column -->
             <div class="col-md-4">
-                <h3>聯絡資訊</h3>
-                <p>
-                    403臺中市西區台灣大道二段2號號 16F-1<br>
+                <h3 class="page-header">聯絡資訊</h3>
+                <p><i class="fa fa-building" aria-hidden="true"></i>
+                    : 403臺中市西區台灣大道二段2號 16F-1<br>
                 </p>
                 <p><i class="fa fa-phone"></i> 
-                    <abbr title="Phone">P</abbr>: (123) 456-7890</p>
+                    : (123) 456-7890</p>
                 <p><i class="fa fa-envelope-o"></i> 
-                    <abbr title="Email">E</abbr>: <a href="mailto:name@example.com">name@example.com</a>
+                    : <a href="mailto:name@example.com">name@example.com</a>
                 </p>
                 <p><i class="fa fa-clock-o"></i> 
-                    <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM</p>
+                    : Monday - Friday: 9:00 AM to 5:00 PM</p>
                 <ul class="list-unstyled list-inline list-social-icons">
                     <li>
                         <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
@@ -159,7 +134,7 @@
         <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
         <div class="row">
             <div class="col-md-8">
-                <h3>寫信給我們</h3>
+                <h3 class="page-header">寫信給我們</h3>
                 <form name="sentMessage" id="contactForm" novalidate>
                     <div class="control-group form-group">
                         <div class="controls">

@@ -19,6 +19,7 @@ let initData = async() => {
     for(let i = 0; i <= 5; i++) {
         topData[i] = allData[i]; //抓取allData的前五筆為首頁精選
     }
+
     slideData[0]=allData[7];
     slideData[1]=allData[10];
     slideData[2]=allData[17];
@@ -39,6 +40,7 @@ let initCollection = () => {
             $(this).text(topData[i].title);
         });
 
+
         $('.colHead_1').each(function (i)  {
             // console.log('colHead.title before', $(this).text());
             // console.log('colHead.title after', $(this).text(topData[i].title));
@@ -49,6 +51,7 @@ let initCollection = () => {
             // console.log('briefIntro.dsec', $(this).text(topData[i].desc));
             $(this).text(topData[i].desc);
         });
+
         
         $('.briefIntro_1').each(function(i){
             // console.log('briefIntro.dsec', $(this).text(topData[i].desc));
@@ -78,6 +81,7 @@ let initCollection = () => {
                 $(this).attr('href', 'details.html?' + stringifiedTopData);
             });
         });
+
         $('.link-top-detail').each(function(i) {    //i: index of .link-detail
             $(this).on('click', function() {
                 let stringifiedTopData1 =  queryString.stringify(slideData[i]);

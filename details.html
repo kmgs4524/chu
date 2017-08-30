@@ -17,10 +17,17 @@
     <!-- Custom CSS -->
     <link href="css/modern-business.css" rel="stylesheet">
 
+    <!-- Font CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Sedgwick+Ave+Display" rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <!-- hellojs -->
     <link rel="stylesheet" href="css/hellojs-color.css">
+
+    <!-- blog-post -->  
+    <link rel="stylesheet" href="css/details.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,25 +58,13 @@
                 <ul class="nav navbar-nav navbar-right">
                     
                     <li>
-                        <a href="contact.html">精選</a>
+                        <a href="index.html">精選</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">探索<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="portfolio-1-col.html">北區</a>
-                            </li>
-                            <li>
-                                <a href="portfolio-2-col.html">中區</a>
-                            </li>
-                            <li>
-                                <a href="portfolio-3-col.html">南區</a>
-                            </li>
-                            
-                        </ul>
+                    <li >
+                        <a href="index.html" >探索</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" >聯絡</a>
+                    <li >
+                        <a href="contact.html" >聯絡</a>
                         
                     </li>
                 </ul>
@@ -101,61 +96,39 @@
         <!-- Content Row -->
         <div class="row">
 
-            <!-- Blog Post Content Column -->
+            <!-- Detail div -->
             <div class="col-lg-8">
 
                 <!-- Blog Post -->
 
                 <hr>
 
-                <!-- Date/Time -->
-                <p><i class="fa fa-clock-o"></i> Posted on August 24, 2013 at 9:00 PM</p>
-
-                <hr>
-
                 <!-- Preview Image -->
-                <img class="img-responsive" src="./img/img1.jpg" alt="">
-
-                <hr>
-
-                <!-- Post Content -->
-                <p class="lead">《地球人遇見小王子》文學Ｘ劇場Ｘ講座</p>
-                <p><span class="glyphicon glyphicon-calendar"></span> 活動時間:</p>
-                <p>2017-10-13(五) 19:00 ~ 2017-10-20(五) 21:00 (GMT+8)</p>
-                <p><span class="glyphicon glyphicon-map-marker"></span> 活動地點:</p>
-                <p>高雄市左營區孔營路25號 (高雄高鐵左營站後站出口步行約15分鐘)</p>
-                <br>
-                <p>活動介紹</p>
-                <hr>
-                <p>區區一本《小王子》被排列在世界銷售排行冠軍《聖經》之後？
-                    不少人納悶《小王子》的重要性何在？
-                    又有多少人只是因為知名著作而喜歡？
-                    當中有多少哲學在跟這個時代對話？</p>
-                <hr>
+                <img class="img-responsive" id='content-image' src="./img/img1.jpg" alt="">
 
             </div>
-
-            <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-4">
-
-                <!-- Blog Search Well -->
-                <div class="well">
-                    <h4>NT$250元起</h4>
-                </div>
-
-                <!-- Side Widget Well -->
-                <div class="well">
-                    <h4>Side Widget Well</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
-                </div>
+                <!-- Main Content -->
+            <div class="col-lg-4 mainContent">
+                <p class="lead" id="content-title">預設標題xxx</p>
+                <p style="font-weight: 400"><span class="glyphicon glyphicon-calendar"></span> 活動時間:</p>
+                <p id="content-time">預設活動時間xxx</p>
+                <p style="font-weight: 400"><span class="glyphicon glyphicon-map-marker"></span> 活動地點:</p>
+                <p id="content-location">預設活動地點xxx</p>
+                <br>
+                <p style="font-weight: 400"><i class="fa fa-info-circle" aria-hidden="true"></i> 活動介紹:</p>
                 
+                <p id="content-description">預設活動介紹xxx</p>
+                <p style="font-weight: 400"><i class="fa fa-usd" aria-hidden="true"></i> 活動價格:</p>
+                <div class="well text-center activity-price ">
+                    <h4 id='content-price'class="content-price">NT$250元起</h4>
+                </div>
             </div>
 
         </div>
         <!-- /.row -->
 
         <hr>
-
+        
         <!-- Footer -->
         <footer>
             <div class="row">
@@ -173,6 +146,9 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!--  details.js -->
+    <script src="./bundle.js"></script>
 
 </body>
 
