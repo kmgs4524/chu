@@ -10,4 +10,8 @@
 ## 相關技術
 - HTML & CSS (Bootstrap模板)
 - JQuery
+- NodeJS
+- Webpack Module Bundler
 - Fetch API
+
+## 團隊成員
