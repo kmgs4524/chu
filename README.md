@@ -13,6 +13,9 @@
 - NodeJS
 - Webpack Module Bundler
 - Fetch API
+## 使用說明
+1. 將此專案下載下來後，NodeJs command移到專案根目錄下並執行npm install，安裝webpack等必要套件。
+2. 到瀏覽器的網址列輸入localhost:8080
 
 ## 團隊成員
 - jolintsai1215
