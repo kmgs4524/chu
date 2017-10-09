@@ -15,3 +15,6 @@
 - Fetch API
 
 ## 團隊成員
+- jolintsai1215
+- kmgs4524
+- battle0450
