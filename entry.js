@@ -124,7 +124,7 @@ navbar.find('a').click(function(){
     var $anchor = $($href).offset();
     // window.scrollTo($anchor.left,$anchor.top);
     $('body').animate({ scrollTop: $anchor.top });
-    return false;
+    return true;
 });
 
 
